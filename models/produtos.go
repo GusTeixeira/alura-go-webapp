@@ -1,5 +1,9 @@
 package models
 
+import (
+	"alura-go-webapp/db"
+)
+
 type Produto struct {
 	Id         int
 	Nome       string
@@ -8,8 +12,8 @@ type Produto struct {
 	Quantidade int
 }
 
-func getProdutos() []Produto {
-	db := conection()
+func GetProdutos() []Produto {
+	db := db.Connection()
 
 	query, err := db.Query("select * from produtos")
 
