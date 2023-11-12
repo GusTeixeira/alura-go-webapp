@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	log.Printf("Servidor iniciado na porta 8000")
+	log.Printf("Servidor iniciado na porta 8080")
 	routes.LoadRotes()
-	err := http.ListenAndServe(":8000", nil)
+	err := http.ListenAndServe(":8080", nil)
 
 	if err != nil {
 		log.Println(err.Error())
